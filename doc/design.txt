@@ -1,0 +1,34 @@
+
+
+the idea is to have modules for parts of the simulation:
+
+- Rocket
+    physical properties, Cg, Mass, Max Power
+    control system - initially it can change only thrust
+    Thrust system changes to be modeled as a control system
+      using python-control
+    Rocket will be aware of its position/speed/orientation - link to world
+
+- Simulation World
+    Position/speed/orientation of Rocket
+    Reference frame for ground/space
+    atmosphere conditions
+    gravity forces
+
+- Flight Plan
+    what we want the rocket to do..
+    take off at t0
+    reach a full stop at altitude x
+    max speed
+    fuel ( including mass )
+    consumption rate
+    later, maybe land and location of landing
+
+- Real Time Simulation
+    continuously update and simulate speed/orientation/position
+      using simpy
+
+- Monitor
+    monitoring the rocket will not only be fun but also helpful to see
+    Start with graph output of position as function of time, etc..
+    eventually maybe a real time visuals with speed controls?
