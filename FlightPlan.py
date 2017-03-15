@@ -8,11 +8,12 @@ __status__ = "Development"
 
 # The flight plann is more of script so we wont bother with an object
 # the rocket will check its flight plan at a given t (time) and set its relavent properties
+from Rocket import Rocket
 
 def FlightPlan(t, rocket):
-    if t < 0
+    if t < 0:
         rocket.power = 0
-    elif t < 500
-        rocket.power = 1
-    elif t >= 500
+    elif t < 500:
+        rocket.power = 100
+    elif t >= 500:
         rocket.power = 0

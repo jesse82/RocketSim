@@ -24,9 +24,10 @@ the idea is to have modules for parts of the simulation:
     consumption rate
     later, maybe land and location of landing
 
-- Real Time Simulation
-    continuously update and simulate speed/orientation/position
-      using simpy
+-  Simulation
+    discrete simulation for speed/orientation/position/forces
+
+    we will try to model the rocket systems with as a continuous system
 
 - Monitor
     monitoring the rocket will not only be fun but also helpful to see
