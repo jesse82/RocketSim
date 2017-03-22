@@ -1,3 +1,6 @@
+#!/usr/local/bin/python
+# -*- coding: iso-8859-15 -*-
+
 """Rocket.py rocket object with conrol system"""
 __author__ = "Jesse Lessard"
 __copyright__ = "Copyright 2017, Jesse Lessard"
@@ -15,12 +18,13 @@ class Rocket:
         self.orentation = numpy.array([0,0,1], float)  # z being upright
         self.position = numpy.array([0,0,0], float)
         self.volocity = numpy.array([0,0,0], float)
+        self.surface = 3                              # projected surfacee profile (m3)
 
         self.power = 0                              # 0 being off, 100 full
         self.mass = 1000                            # mass of rocket (kg)
         self.fuel = 100                             # mass of fuel (kg)
         self.consumption = 1                        # fuel consumed at full power (kg/min)
-        self.maxthrust = 10000                      # max power thrust (n)
+        self.maxthrust = 50000                      # max power thrust (n)
 
 
     def force(self):
